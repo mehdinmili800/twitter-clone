@@ -1,0 +1,69 @@
+<div [class.dark]="isDarkMode">
+     <!-- navbar -->
+     <nav class="bg-bg-primary text-text-primary">
+
+        <div class="container mx-auto py-5 flex items-center justify-between">
+            <div class="flex items-center gap-2">
+                <img class="w-8" src="/assets/img/logo.png" alt="">
+                <span class="text-2xl font-bold text-indigo-900 dark:text-white">
+                    Portwind
+                </span>
+            </div>
+            <ul class="hidden md:flex space-x-10 text-gray-600 dark:text-gray-100 font-bold text-sm uppercase">
+                <li class="hover:text-gray-500">
+                    <a [routerLink]="['/portfolio/home-page']" routerLinkActive="router-link-active" >
+                        homepage
+                    </a>
+                </li>
+                <li class="hover:text-gray-500">
+                    <a [routerLink]="['/portfolio/about-me']" routerLinkActive="router-link-active" >
+                        about me
+                    </a>
+                </li>
+
+                <li class="hover:text-gray-500">
+                    <a [routerLink]="['/portfolio/services']" routerLinkActive="router-link-active" >
+                        services
+                    </a>
+                </li>
+
+                <li class="hover:text-gray-500">
+                    <a [routerLink]="['/portfolio/works']" routerLinkActive="router-link-active" >
+                        works
+                    </a>
+                </li>
+
+                <li class="hover:text-gray-500">
+                    <a [routerLink]="['/portfolio/contact']" routerLinkActive="router-link-active" >
+                        contact
+                    </a>
+                </li>
+            </ul>
+
+            <img id="moon" (click)="toggleDarkMode()"  src="/assets/img/moon.png" class="hidden md:block w-5 cursor-pointer" alt="">
+            <div id="hamburger" (click)="toggleMenu()" class="space-y-1 md:hidden cursor-pointer z-20">
+                <div class="w-6 h-0.5 bg-black"></div>
+                <div class="w-6 h-0.5 bg-black"></div>
+                <div class="w-6 h-0.5 bg-black"></div>
+            </div>
+            <ul id="menu" [class.hidden]="isMenuHidden"
+                class="hidden bg-indigo-900 absolute left-0 top-0 w-full p-10 rounded-b-3xl space-y-10 text-white text-center">
+                <li>
+                    <a id="hLink" [routerLink]="['/portfolio/home-page']" routerLinkActive="router-link-active" >homepage</a>
+                </li>
+                <li>
+                    <a id="hLink" [routerLink]="['/portfolio/about-me']" routerLinkActive="router-link-active" >about me</a>
+                </li>
+                <li>
+                    <a id="hLink" [routerLink]="['/portfolio/services']" routerLinkActive="router-link-active" >services</a>
+                </li>
+                <li>
+                    <a id="hLink" [routerLink]="['/portfolio/works']" routerLinkActive="router-link-active" >works</a>
+                </li>
+                <li>
+                    <a id="hLink" [routerLink]="['/portfolio/contact']" routerLinkActive="router-link-active" >contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</div>

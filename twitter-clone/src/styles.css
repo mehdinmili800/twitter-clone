@@ -1,0 +1,19 @@
+/* You can add global styles to this file, and also import other style files */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer base {
+    :root {
+      --color-bg-primary: theme('colors.white');
+      --color-text-primary: theme('colors.gray.800');
+      /* Add more light mode variables */
+    }
+  
+    .dark {
+      --color-bg-primary: theme('colors.gray.800');
+      --color-text-primary: theme('colors.white');
+      /* Add more dark mode variables */
+    }
+  }
